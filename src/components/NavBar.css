@@ -1,0 +1,8 @@
+h2 {
+  text-align: left;
+}
+
+.nav-border {
+  border: 5px solid red;
+  border-radius: 0.875rem;
+}

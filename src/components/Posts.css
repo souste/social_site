@@ -1,0 +1,32 @@
+.post-title {
+  text-align: center;
+}
+
+.posts-img {
+  max-width: 500px;
+  height: 500px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posts-description {
+  text-align: center;
+}
+
+.posts-loading {
+  text-align: center;
+}
+
+.posts-button {
+  margin-left: 900px;
+}
+
+.posts-set {
+  border: 5px solid black;
+  border-radius: 0.875rem;
+  display: inline-block;
+  text-align: left;
+  text-align: center;
+}
