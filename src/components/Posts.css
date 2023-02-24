@@ -1,5 +1,7 @@
 .post-title {
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .posts-img {
@@ -13,14 +15,12 @@
 
 .posts-description {
   text-align: center;
+  max-width: 500px;
+  color: black;
 }
 
 .posts-loading {
   text-align: center;
-}
-
-.posts-button {
-  margin-left: 900px;
 }
 
 .posts-set {
@@ -29,4 +29,5 @@
   display: inline-block;
   text-align: left;
   text-align: center;
+  color: black;
 }

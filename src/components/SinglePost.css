@@ -1,0 +1,51 @@
+.single-post-title {
+  text-align: center;
+}
+
+.single-posts-img {
+  max-width: 600px;
+  height: 600px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-posts-description {
+  text-align: center;
+}
+
+.single-posts-likes {
+  text-align: center;
+}
+
+.single-posts-createdAt {
+  text-align: center;
+}
+
+.single-post-user {
+  text-align: center;
+}
+
+.posts-loading {
+  text-align: center;
+}
+
+.single-post-set {
+  border: 5px solid black;
+  border-radius: 0.875rem;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.comments-box {
+  text-align: center;
+  border: 5px solid grey;
+  border-radius: 0.875rem;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.comments-title {
+  text-align: center;
+}

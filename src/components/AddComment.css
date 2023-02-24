@@ -1,0 +1,37 @@
+.add-comments-box {
+  text-align: center;
+  border: 5px solid blue;
+  border-radius: 0.875rem;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.comments-box {
+  text-align: center;
+  border: 5px solid grey;
+  border-radius: 0.875rem;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.comments-title {
+  text-align: center;
+}
+
+.comment-input {
+  box-sizing: border-box;
+  width: 600px;
+  height: 150px;
+  position: relative;
+  text-align: left;
+  padding-bottom: 120px;
+}
+
+.description-input {
+  box-sizing: border-box;
+  width: 600px;
+  height: 150px;
+  position: relative;
+  text-align: left;
+  padding-bottom: 120px;
+}

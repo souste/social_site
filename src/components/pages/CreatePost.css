@@ -1,0 +1,47 @@
+li {
+  list-style: none;
+  text-align: center;
+}
+
+.create-post-title {
+  text-align: center;
+}
+
+.create-post-box {
+  text-align: left;
+  border: 5px solid grey;
+  border-radius: 0.875rem;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.title-input {
+  width: 400px;
+}
+
+.img-input {
+  width: 400px;
+}
+
+.description-input {
+  box-sizing: border-box;
+  width: 600px;
+  height: 150px;
+  position: relative;
+  text-align: left;
+  padding-bottom: 120px;
+}
+
+.description-input::placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.title-input,
+.img-input,
+.description-input {
+  text-align: left;
+}
