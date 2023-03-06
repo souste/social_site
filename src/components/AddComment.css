@@ -1,17 +1,28 @@
-.add-comments-box {
+/* .add-comments-box {
   text-align: center;
   border: 5px solid blue;
   border-radius: 0.875rem;
   margin-left: 400px;
   margin-right: 400px;
+} */
+
+.commentsArea {
+  background: #c8d7eb;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 0.875rem;
+  padding-bottom: 20px;
 }
 
 .comments-box {
-  text-align: center;
-  border: 5px solid grey;
+  text-align: left;
+  border: none;
   border-radius: 0.875rem;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.767);
+  padding-left: 10px;
 }
 
 .comments-title {
@@ -34,4 +45,37 @@
   position: relative;
   text-align: left;
   padding-bottom: 120px;
+  border-radius: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.767);
+  padding-left: 10px;
+}
+
+.comment-submit-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2563eb;
+}
+
+.comment-delete-button {
+  background-color: #e97379;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #2563eb;
 }

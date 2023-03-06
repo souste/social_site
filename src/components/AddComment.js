@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { getPostById } from "../api";
 import Axios from "axios";
 import "./AddComment.css";
+import { deleteCommentById } from "../api";
+import { useParams } from "react-router-dom";
 
 function AddComment({ post_id }) {
   const url = "https://social-site-backend-souste.onrender.com/api/comments";
@@ -41,6 +43,23 @@ function AddComment({ post_id }) {
     });
   }
 
+  const handleDelete = (comment_id) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this comment?"
+    );
+    if (confirmed) {
+      deleteCommentById(comment_id)
+        .then(() => {
+          setComments((prevComments) =>
+            prevComments.filter((c) => c._id !== comment_id)
+          );
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+  };
+
   function handleChange(event) {
     const newComment = { ...comment };
     newComment[event.target.id] = event.target.value;
@@ -49,7 +68,7 @@ function AddComment({ post_id }) {
   }
 
   return (
-    <div>
+    <div className="commentsArea">
       <h2 className="comments-title">Comments</h2>
 
       <form onSubmit={handleSubmit}>
@@ -58,7 +77,7 @@ function AddComment({ post_id }) {
             onChange={handleChange}
             id="comment"
             value={comment.comment}
-            placeholder="add comment"
+            placeholder="   Add comment"
             type="text"
             className="description-input"
           ></input>
@@ -73,21 +92,30 @@ function AddComment({ post_id }) {
           ></input>
         </li>
         <li>
-          <button>Submit</button>
+          <button className="comment-submit-button">Submit</button>
         </li>
       </form>
 
-      {comments.map((comment) => (
-        <div key={comment.id}>
-          <ul className="comments-box">
-            <h4>{comment.comment}</h4>
-            <p>{comment.like} likes</p>
-            <p>Created On: {comment.createdAt}</p>
-            {/* <p>Created By: {comment.user.name}</p> - this crashes! */}
-            <p>Created by: Stephen Souness</p>
-          </ul>
-        </div>
-      ))}
+      {comments
+        .slice()
+        .reverse()
+        .map((comment) => (
+          <div key={comment.id}>
+            <ul className="comments-box">
+              <p>Stephen Souness {comment.createdAt}</p>
+              <h4>{comment.comment}</h4>
+
+              {/* <p>Created By: {comment.user.name}</p> - this crashes! */}
+
+              <button
+                className="comment-delete-button"
+                onClick={() => handleDelete(comment._id)}
+              >
+                Delete
+              </button>
+            </ul>
+          </div>
+        ))}
     </div>
   );
 }

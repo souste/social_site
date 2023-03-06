@@ -47,7 +47,7 @@ function CreatePost() {
             onChange={handleChange}
             id="title"
             value={data.title}
-            placeholder="title"
+            placeholder="Title"
             type="text"
             className="title-input"
           ></input>
@@ -59,7 +59,7 @@ function CreatePost() {
             onChange={handleChange}
             id="img"
             value={data.img}
-            placeholder="img url"
+            placeholder="Img url"
             type="text"
             className="img-input"
           ></input>
@@ -70,7 +70,7 @@ function CreatePost() {
             onChange={handleChange}
             id="description"
             value={data.description}
-            placeholder="description"
+            placeholder="  Description"
             type="text"
             className="description-input"
           ></input>
@@ -86,7 +86,7 @@ function CreatePost() {
           ></input>
         </li>
         <li>
-          <button>Submit</button>
+          <button className="create-post-submit-button">Submit</button>
         </li>
       </form>
     </div>

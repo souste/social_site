@@ -1,0 +1,16 @@
+.about-box {
+  background: #c8d7eb;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 0.875rem;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: justify;
+}
+
+.about-title {
+  text-align: center;
+}

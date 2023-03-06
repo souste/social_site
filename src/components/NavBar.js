@@ -1,20 +1,22 @@
 import "./NavBar.css";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { useImperativeHandle } from "react";
 
 function NavBar() {
   return (
-    <nav className="nav">
-      <Link to="/" className="site-title">
-        CODE FRIENDS
-      </Link>
-      <ul>
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/CreatePost">Create Post</CustomLink>
-        <CustomLink to="/Profile">Profile</CustomLink>
-        <CustomLink to="/About">About</CustomLink>
-      </ul>
-    </nav>
+    <div>
+      <nav className="nav">
+        <Link to="/" className="site-title">
+          CODE FRIENDS
+        </Link>
+        <ul>
+          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to="/CreatePost">Create Post</CustomLink>
+          <CustomLink to="/Profile">Profile</CustomLink>
+          <CustomLink to="/About">About</CustomLink>
+        </ul>
+      </nav>
+      <div className="banner"></div>
+    </div>
   );
 }
 

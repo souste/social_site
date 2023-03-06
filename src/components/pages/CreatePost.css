@@ -9,10 +9,11 @@ li {
 
 .create-post-box {
   text-align: left;
-  border: 5px solid grey;
+
   border-radius: 0.875rem;
   margin-left: 400px;
   margin-right: 400px;
+  background: #c8d7eb;
 }
 
 .title-input {
@@ -44,4 +45,14 @@ li {
 .img-input,
 .description-input {
   text-align: left;
+}
+
+.create-post-submit-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
