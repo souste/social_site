@@ -20,8 +20,12 @@ a {
   margin-right: auto;
 }
 
-.placeholder {
-  text-align: left;
+.posts-author {
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 .posts-description {

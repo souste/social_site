@@ -4,7 +4,8 @@ import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { getPostById, deletePostById, patchLike } from "../api";
 import AddComment from "./AddComment";
 import { Link } from "react-router-dom";
-// import CloseButton from "react-bootstrap/CloseButton";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SinglePost() {
   const { post_id } = useParams();
@@ -22,12 +23,11 @@ function SinglePost() {
   const handleLikes = (post_id) => {
     if (likes === 0) {
       setLikes(1);
-      patchLike(post_id).then((post) => {
+      patchLike(post_id).then((upLike) => {
         if (singlePost._id === post_id) {
-          setSinglePost((post) => {
-            return { ...post, likes: post.likes + 1 };
-          });
+          return { ...upLike, likes: singlePost.likes + 1 };
         }
+        return upLike;
       });
     }
   };
@@ -56,10 +56,12 @@ function SinglePost() {
       ) : (
         <div>
           <li className="single-post-set">
-            {/* <Link to={`/`}> */}
-
-            {/* </Link> */}
             <p className="single-post-top-filler">hhhhhhhhhhhhhhhhhh</p>
+            <p className="posts-author">
+              By <span className="bold-text">{singlePost.author}</span> posted
+              on&nbsp;
+              <span className="bold-text">{singlePost.created}</span>
+            </p>
             <h1 className="single-post-title">{singlePost.title}</h1>
 
             <img
@@ -70,39 +72,27 @@ function SinglePost() {
             <p className="single-posts-description">{singlePost.description}</p>
 
             <p className="single-posts-likes">
-              Likes: {singlePost.likes}{" "}
               <button
+                className="like-button"
                 onClick={() => {
-                  handleLikes(post_id);
+                  handleLikes(singlePost.post_id);
                 }}
               >
-                Like
+                <FontAwesomeIcon icon={faThumbsUp} />
               </button>
+              {singlePost.likes + likes}
             </p>
 
             <Link to={`/`}>
               <button className="single-post-back-button">&times;</button>
             </Link>
-            <p className="single-post-user">
-              Stephen Souness, {singlePost.createdAt}
-            </p>
+
             <button className="delete-button" onClick={handleDelete}>
               Delete
             </button>
           </li>
           <div>
-            {/* <h2 className="comments-title">Comments</h2> */}
             <AddComment post_id={post_id} />
-            {/* {singlePost.comments &&
-          singlePost.comments.map((comment) => {
-            return (
-              <ul className="comments-box" key="comment._id">
-                <p>{comment.comment}</p>
-                <p>Created On: {comment.createdAt}</p>
-                <p>Created By: {comment.user.name} </p>
-              </ul>
-            );
-          })} */}
           </div>
         </div>
       )}

@@ -55,7 +55,11 @@ function Posts() {
               key={post._id}
             >
               <li className="posts-set" key={post._id}>
-                <p className="placeholder"> By: Placeholdina67 on 21/02/22</p>
+                <p className="posts-author">
+                  By <span className="bold-text">{post.author}</span> posted
+                  on&nbsp;
+                  <span className="bold-text">{post.created}</span>
+                </p>
                 <h1 className="post-title">{post.title}</h1>
 
                 <img src={post.img} className="posts-img" alt={post.title} />

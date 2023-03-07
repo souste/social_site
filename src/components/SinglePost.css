@@ -53,8 +53,19 @@
   text-align: center;
 }
 
+.like-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+}
+
 .single-post-user {
-  text-align: left;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.single-post-created {
+  text-align: center;
   margin-left: 30px;
   padding-bottom: 20px;
 }

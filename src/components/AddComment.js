@@ -10,8 +10,9 @@ function AddComment({ post_id }) {
   const [comment, setComment] = useState({
     comment: "",
     like: "",
+    author: "",
     post: "",
-    user: { name: "" },
+    // user: { name: "" },
   });
 
   const [comments, setComments] = useState([]);
@@ -29,16 +30,18 @@ function AddComment({ post_id }) {
     event.preventDefault();
     Axios.post(url, {
       comment: comment.comment,
+      author: comment.author,
       like: comment.like,
       post: post_id,
-      user: "63f4c0b4575199880c8fcbda",
+      // user: "63f4c0b4575199880c8fcbda",
     }).then((res) => {
       setComments((prevComments) => [...prevComments, res.data]);
       setComment({
         comment: "",
         like: "",
+        author: "",
         post: "",
-        user: "",
+        // user: "",
       });
     });
   }
@@ -85,12 +88,22 @@ function AddComment({ post_id }) {
         <li>
           <input
             onChange={handleChange}
+            id="author"
+            value={comment.author}
+            placeholder="   Your Name"
+            type="text"
+            className="name-input"
+          ></input>
+        </li>
+        {/* <li>
+          <input
+            onChange={handleChange}
             id="like"
             value={comment.like}
             placeholder="like"
             type="number"
           ></input>
-        </li>
+        </li> */}
         <li>
           <button className="comment-submit-button">Submit</button>
         </li>
@@ -102,7 +115,9 @@ function AddComment({ post_id }) {
         .map((comment) => (
           <div key={comment.id}>
             <ul className="comments-box">
-              <p>Stephen Souness {comment.createdAt}</p>
+              <p className="comments-author">
+                By {comment.author} ({comment.created})
+              </p>
               <h4>{comment.comment}</h4>
 
               {/* <p>Created By: {comment.user.name}</p> - this crashes! */}
