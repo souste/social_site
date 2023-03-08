@@ -127,3 +127,21 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
+@media screen and (max-width: 600px) {
+  .single-post-title {
+    max-width: 90%;
+  }
+
+  .single-posts-description {
+    max-width: 90%;
+  }
+
+  .single-posts-img {
+    height: 400px;
+  }
+
+  .comments-box {
+    margin: 0 auto;
+  }
+}
