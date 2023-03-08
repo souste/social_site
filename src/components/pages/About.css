@@ -11,6 +11,22 @@
   text-align: justify;
 }
 
+.about-box p {
+  font-size: 20px;
+}
+
 .about-title {
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .about-box {
+    max-width: 90%;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    padding: 10px;
+  }
+  .about-box p {
+    font-size: 16px;
+  }
 }

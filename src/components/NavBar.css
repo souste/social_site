@@ -54,3 +54,31 @@ body {
   height: 180px;
   padding: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  .nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .nav li {
+    width: 100%;
+  }
+  .nav li.active {
+    background-color: transparent;
+  }
+  .nav li:hover {
+    background-color: transparent;
+  }
+  .nav li:hover a {
+    color: #3498db;
+  }
+}

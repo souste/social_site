@@ -44,6 +44,8 @@
 }
 
 .description-input {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
   box-sizing: border-box;
   width: 600px;
   height: 150px;

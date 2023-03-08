@@ -27,6 +27,8 @@ li {
 }
 
 .description-input {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
   box-sizing: border-box;
   width: 600px;
   height: 150px;
@@ -66,4 +68,24 @@ li {
   border-radius: 0.25rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .create-post-box {
+    margin: 0 auto;
+  }
+
+  .title-input,
+  .img-input,
+  .description-input,
+  .author-input {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .description-input {
+    font-size: 14px;
+    line-height: 1.2;
+    height: 100px;
+  }
 }

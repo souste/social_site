@@ -76,14 +76,14 @@ function AddComment({ post_id }) {
 
       <form onSubmit={handleSubmit}>
         <li>
-          <input
+          <textarea
             onChange={handleChange}
             id="comment"
             value={comment.comment}
             placeholder="   Add comment"
             type="text"
             className="description-input"
-          ></input>
+          ></textarea>
         </li>
         <li>
           <input
